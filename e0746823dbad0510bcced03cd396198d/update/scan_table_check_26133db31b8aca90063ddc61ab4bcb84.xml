@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="scan_table_check">
+    <scan_table_check action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <category>security</category>
+        <conditions table="core_company">nameISEMPTY^EQ<item endquery="false" field="name" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description>All records in the core_company table must have a non-empty name field. An empty name field my indicate problems with imported data or indicate remainders of test data records.</description>
+        <documentation_url/>
+        <finding_type>scan_finding</finding_type>
+        <name>DataSanity - Companies without names</name>
+        <priority>1</priority>
+        <resolution_details>Populate the empty name fields or remove affected records if applicable. </resolution_details>
+        <run_condition/>
+        <score_max>100</score_max>
+        <score_min>0</score_min>
+        <score_scale>1</score_scale>
+        <script><![CDATA[(function (engine) {
+
+    // Add your code here
+
+})(engine);]]></script>
+        <short_description>Companies must have a name</short_description>
+        <sys_class_name>scan_table_check</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-15 14:35:49</sys_created_on>
+        <sys_id>26133db31b8aca90063ddc61ab4bcb84</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DataSanity - Companies without names</sys_name>
+        <sys_package display_value="DataSanity WORK IN PROGRESS" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DataSanity WORK IN PROGRESS">e0746823dbad0510bcced03cd396198d</sys_scope>
+        <sys_update_name>scan_table_check_26133db31b8aca90063ddc61ab4bcb84</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-15 14:35:49</sys_updated_on>
+        <table>core_company</table>
+        <use_manifest>false</use_manifest>
+    </scan_table_check>
+    <sys_translated_text action="delete_multiple" query="documentkey=26133db31b8aca90063ddc61ab4bcb84"/>
+</record_update>
