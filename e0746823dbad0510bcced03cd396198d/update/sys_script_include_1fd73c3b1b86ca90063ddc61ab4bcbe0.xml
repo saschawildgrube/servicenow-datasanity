@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_datasanity.DevTools</api_name>
+        <caller_access>1</caller_access>
+        <client_callable>false</client_callable>
+        <description>Implements the extension point for DevTools.</description>
+        <name>DevTools</name>
+        <script><![CDATA[var DevTools = Class.create();
+DevTools.prototype = {
+	initialize: function()
+	{	
+	},
+
+	GetParentRecord: function(grRecord)
+	{
+		var IsValidFunction = x_snc_devtools.IsValidFunction;
+		if (IsValidFunction(x_snc_datasanity.DevToolsGetParentRecord))
+		{
+			return DevToolsGetParentRecord(grRecord);
+		}
+		return false;
+	},	
+
+	GetLinkDirectory: function(linkdirectory)
+	{
+		var IsValidFunction = x_snc_devtools.IsValidFunction;
+		if (IsValidFunction(x_snc_datasanity.DevToolsGetLinkDirectory))
+		{
+			return DevToolsGetLinkDirectory(linkdirectory);
+		}
+		return linkdirectory;
+	},
+
+	GetFormatConfig: function(grRecord)
+	{
+		var IsValidFunction = x_snc_devtools.IsValidFunction;
+		if (IsValidFunction(x_snc_datasanity.DevToolsGetFormatConfig))
+		{
+			return DevToolsGetFormatConfig(grRecord);
+		}
+		return false;
+	},	
+	
+	GetApplicationStatus: function(status)
+	{
+		var IsValidFunction = x_snc_devtools.IsValidFunction;
+		if (IsValidFunction(x_snc_datasanity.DevToolsGetApplicationStatus))
+		{
+			status = DevToolsGetApplicationStatus(status);
+		}
+		return status;
+	},		
+
+	RenderDebugDump: function()
+	{
+		var IsValidFunction = x_snc_devtools.IsValidFunction;
+		var strDebug = '';
+		if (IsValidFunction(x_snc_datasanity.DevToolsRenderDebugDump))
+		{
+			strDebug = x_snc_devtools.GetStringValue(DevToolsRenderDebugDump());
+		}
+		return strDebug;
+	},		
+	
+	GetInstancePipelineName: function(strInstanceName)
+	{
+		var IsValidFunction = x_snc_devtools.IsValidFunction;
+		var strInstancePipelineName = '';
+		if (IsValidFunction(x_snc_datasanity.DevToolsGetInstancePipelineName))
+		{
+			strInstancePipelineName = x_snc_devtools.GetStringValue(DevToolsGetInstancePipelineName(strInstanceName));
+		}
+		return strInstancePipelineName;	
+	},
+
+	
+	type: 'DevTools'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-15 10:14:32</sys_created_on>
+        <sys_id>1fd73c3b1b86ca90063ddc61ab4bcbe0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DevTools</sys_name>
+        <sys_package display_value="DataSanity WORK IN PROGRESS" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DataSanity WORK IN PROGRESS">e0746823dbad0510bcced03cd396198d</sys_scope>
+        <sys_update_name>sys_script_include_1fd73c3b1b86ca90063ddc61ab4bcbe0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-15 10:14:32</sys_updated_on>
+    </sys_script_include>
+</record_update>
