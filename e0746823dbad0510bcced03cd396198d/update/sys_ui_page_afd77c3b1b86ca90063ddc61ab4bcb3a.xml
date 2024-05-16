@@ -22,7 +22,8 @@
 	]</g2:no_escape>
 	
 	<h2>Features</h2> 
-	<p>TODO: Document the features of the app here...</p>
+	<p>The DataSanity app contains Instance Scan checks that validate data records. The checks are aimed to reveal data problems, incosistencies and invalid data records.</p>
+	<p>Results should be reviewed on a regular basis and countermeasures should be taken. Bad data leads to incorrect reports, bad decisions and unnecessary work.</p>
 
 	<h2>Disclaimer</h2>
 	<g2:no_escape>$[docapi.RenderDisclaimer()]</g2:no_escape>	
@@ -107,13 +108,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-05-15 10:14:34</sys_created_on>
         <sys_id>afd77c3b1b86ca90063ddc61ab4bcb3a</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>manual</sys_name>
         <sys_package display_value="DataSanity WORK IN PROGRESS" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
         <sys_policy/>
         <sys_scope display_value="DataSanity WORK IN PROGRESS">e0746823dbad0510bcced03cd396198d</sys_scope>
         <sys_update_name>sys_ui_page_afd77c3b1b86ca90063ddc61ab4bcb3a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-05-15 14:25:53</sys_updated_on>
+        <sys_updated_on>2024-05-16 07:18:33</sys_updated_on>
     </sys_ui_page>
 </record_update>
