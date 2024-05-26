@@ -102,6 +102,7 @@
 	<ol>
 		<li>Check "DataSanity - Users without user name (User ID)" only considers users in sys_user (and ignores extended tables like customer_contact).</li>
 		<li>Check "DataSanity - Roles assigned directly to users" now ignores the roles snc_internal and snc_external (which are introduced by the "Explicit Roles" plugin) as these roles are directly assigned to users automatically.</li>
+		<li>Improved ATF test for check "DataSanity - Groups with non-persona roles" by setting the scope of the test data role.</li>
 	</ol>
 
 
@@ -117,13 +118,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-05-15 10:14:34</sys_created_on>
         <sys_id>afd77c3b1b86ca90063ddc61ab4bcb3a</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>manual</sys_name>
         <sys_package display_value="DataSanity WORK IN PROGRESS" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
         <sys_policy/>
         <sys_scope display_value="DataSanity WORK IN PROGRESS">e0746823dbad0510bcced03cd396198d</sys_scope>
         <sys_update_name>sys_ui_page_afd77c3b1b86ca90063ddc61ab4bcb3a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-05-26 13:44:58</sys_updated_on>
+        <sys_updated_on>2024-05-26 13:48:20</sys_updated_on>
     </sys_ui_page>
 </record_update>
