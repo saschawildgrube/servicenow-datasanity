@@ -22,7 +22,7 @@
 	]</g2:no_escape>
 	
 	<h2>Features</h2> 
-	<p>The DataSanity app contains Instance Scan checks that validate data records. The checks are aimed to reveal data problems, incosistencies and invalid data records.</p>
+	<p>The DataSanity app contains Instance Scan checks that validate data records. The checks are aimed to reveal data problems, inconsistencies and invalid records.</p>
 	<p>The checks also enforce the application of the persona role concept, described in the whitepaper&#160;<a href="https://www.wildgrube.com/download/A%20mature%20Development%20and%20Deployment%20Process.pdf" target="_blank">A mature Development and Deployment Process - How to sleep well when your 200 developers deploy apps every day</a>.</p>
 	<p>Results should be reviewed on a regular basis and countermeasures should be taken. Bad data leads to incorrect reports, bad decisions and unnecessary work.</p>
 
@@ -98,6 +98,14 @@
 	
 	<h2>Release Notes</h2>
 
+	<h3>1.0.1 - 2024-05-26</h3>
+	<ol>
+		<li>Check "DataSanity - Users without user name (User ID)" only considers users in sys_user (and ignores extended tables like customer_contact).</li>
+		<li>Check "DataSanity - Roles assigned directly to users" now ignores the roles snc_internal and snc_external (which are introduced by the "Explicit Roles" plugin) as these roles are directly assigned to users automatically.</li>
+		<li>Improved ATF test for check "DataSanity - Groups with non-persona roles" by setting the scope of the test data role.</li>
+	</ol>
+
+
 	<h3>1.0.0 - 2024-05-17</h3>
 	<p>First baselined version</p>
 
@@ -110,13 +118,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-05-15 10:14:34</sys_created_on>
         <sys_id>afd77c3b1b86ca90063ddc61ab4bcb3a</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>manual</sys_name>
         <sys_package display_value="DataSanity" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
         <sys_policy/>
         <sys_scope display_value="DataSanity">e0746823dbad0510bcced03cd396198d</sys_scope>
         <sys_update_name>sys_ui_page_afd77c3b1b86ca90063ddc61ab4bcb3a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-05-17 15:28:17</sys_updated_on>
+        <sys_updated_on>2024-05-26 14:20:22</sys_updated_on>
     </sys_ui_page>
 </record_update>

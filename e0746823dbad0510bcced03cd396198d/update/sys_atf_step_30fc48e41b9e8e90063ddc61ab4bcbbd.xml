@@ -13,14 +13,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-05-17 15:02:34</sys_created_on>
         <sys_id>30fc48e41b9e8e90063ddc61ab4bcbbd</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Run Server Side Script</sys_name>
         <sys_package display_value="DataSanity" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
         <sys_policy/>
         <sys_scope display_value="DataSanity">e0746823dbad0510bcced03cd396198d</sys_scope>
         <sys_update_name>sys_atf_step_30fc48e41b9e8e90063ddc61ab4bcbbd</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-05-17 15:15:05</sys_updated_on>
+        <sys_updated_on>2024-05-26 13:47:25</sys_updated_on>
         <table/>
         <test display_value="DataSanity - Groups with non-persona roles">1fdcc0e41b9e8e90063ddc61ab4bcb00</test>
         <timeout/>
@@ -35,9 +35,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-05-17 15:02:34</sys_created_on>
         <sys_id>46fc48e41b9e8e90063ddc61ab4bcbe9</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-05-17 15:15:05</sys_updated_on>
+        <sys_updated_on>2024-05-26 13:47:26</sys_updated_on>
         <value>(function(outputs, steps, stepResult, assertEqual)&#13;
 {&#13;
 	var test = new x_snc_devtools.TestAPI(outputs, steps, stepResult, assertEqual);&#13;
@@ -70,6 +70,7 @@
 	grRole = new GlideRecord('sys_user_role');&#13;
 	grRole.initialize();&#13;
 	grRole.suffix = 'persona_test';&#13;
+	grRole.sys_scope = 'e0746823dbad0510bcced03cd396198d'; // DataSanity app&#13;
 	var strRoleSysId = x_snc_devtools.GlideRecordInsert(grRole);&#13;
 	grGroupHasRole = new GlideRecord('sys_group_has_role');&#13;
 	grGroupHasRole.initialize();&#13;
