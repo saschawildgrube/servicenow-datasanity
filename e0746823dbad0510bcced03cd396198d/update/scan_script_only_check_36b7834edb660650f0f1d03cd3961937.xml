@@ -18,43 +18,18 @@
 	grSysAuto.addActiveQuery();
 	grSysAuto.addQuery('run_as','!=','');
 	grSysAuto.query();
-	var nCount = 0;
 	while (grSysAuto.next())
-	{
-		Debug(x_snc_devtools.RenderRecordSummary(grSysAuto));
-  
-		nCount++;
-		//gs.info(nCount + ': ' + grSysAuto.sys_class_name + ': ' + grSysAuto.sys_name);
+	{  
 		var grUser = x_snc_devtools.GetUserRecord(grSysAuto.run_as);
 		if (x_snc_devtools.IsValidRecord(grUser))
 		{
 			if (x_snc_devtools.IsTechnicalUser(grUser) == false)
 			{
 				finding.setCurrentSource(grSysAuto);
-       			finding.increment();
+				finding.increment();
 			}	
 		}
 	}
-
-/*
-	//Debug(x_snc_devtools.RenderRecordSummary(engine.current));
-    var grUser = x_snc_devtools.GetUserRecord(engine.current.run_as);
-	if (x_snc_devtools.IsValidRecord(grUser))
-	{
-		if (x_snc_devtools.IsTechnicalUser(grUser) == false)
-		{
-			engine.finding.increment();
-		}	
-	}
-	//engine.finding.increment();
-*/	
-	//gs.debug(engine.current.sys_class_name + ': ' + engine.current.sys_name);
-
-	/*
-
-
-
-*/
 
 })(finding);]]></script>
         <short_description>Scheduled Jobs should be run as technical users</short_description>
@@ -62,14 +37,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-06-04 06:49:08</sys_created_on>
         <sys_id>36b7834edb660650f0f1d03cd3961937</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>DataSanity - Scheduled Jobs run by technical users</sys_name>
         <sys_package display_value="DataSanity WORK IN PROGRESS" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
         <sys_policy/>
         <sys_scope display_value="DataSanity WORK IN PROGRESS">e0746823dbad0510bcced03cd396198d</sys_scope>
         <sys_update_name>scan_script_only_check_36b7834edb660650f0f1d03cd3961937</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-06-04 07:17:28</sys_updated_on>
+        <sys_updated_on>2024-06-04 07:20:58</sys_updated_on>
     </scan_script_only_check>
     <sys_translated_text action="delete_multiple" query="documentkey=36b7834edb660650f0f1d03cd3961937"/>
 </record_update>
