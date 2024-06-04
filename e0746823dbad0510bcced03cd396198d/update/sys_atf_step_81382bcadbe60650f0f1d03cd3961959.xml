@@ -13,14 +13,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-06-04 09:07:08</sys_created_on>
         <sys_id>81382bcadbe60650f0f1d03cd3961959</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Run Server Side Script</sys_name>
         <sys_package display_value="DataSanity WORK IN PROGRESS" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
         <sys_policy/>
         <sys_scope display_value="DataSanity WORK IN PROGRESS">e0746823dbad0510bcced03cd396198d</sys_scope>
         <sys_update_name>sys_atf_step_81382bcadbe60650f0f1d03cd3961959</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-06-04 09:44:46</sys_updated_on>
+        <sys_updated_on>2024-06-04 13:28:26</sys_updated_on>
         <table/>
         <test display_value="DataSanity - Scheduled Jobs run by technical users">751867cadbe60650f0f1d03cd396197c</test>
         <timeout/>
@@ -49,9 +49,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-06-04 09:07:08</sys_created_on>
         <sys_id>7e386bcadbe60650f0f1d03cd396192c</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-06-04 09:44:46</sys_updated_on>
+        <sys_updated_on>2024-06-04 13:28:26</sys_updated_on>
         <value>(function(outputs, steps, stepResult, assertEqual)&#13;
 {&#13;
 	var test = new x_snc_devtools.TestAPI(outputs, steps, stepResult, assertEqual);&#13;
@@ -63,7 +63,7 @@
 	var testdata = new x_snc_devtools.TestDataAPI('_ATF_DATASANITY');&#13;
 &#13;
 	var strUserRegularSysId = testdata.CreateUser('Regular',[],false);&#13;
-	var strUserTechnicalSysId = testdata.CreateUser('Technical',[],false);&#13;
+	var strUserTechnicalSysId = testdata.CreateUser('Technical',[],true);&#13;
 	&#13;
 &#13;
 	var grRecord = new GlideRecord('sysauto');&#13;
@@ -81,8 +81,6 @@
 	var strRecordRegularSysId = x_snc_devtools.GlideRecordInsert(grRecord);&#13;
 &#13;
 	test.TestCase_InstanceScanCheckScriptOnly(strCheck,[strRecordRegularSysId],[strRecordTechnicalSysId]);&#13;
-&#13;
-&#13;
 &#13;
 	return test.GetResult();&#13;
 	&#13;
