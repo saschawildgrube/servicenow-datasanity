@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="scan_script_only_check">
+    <scan_script_only_check action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>data_sanity</category>
+        <description>A Scheduled Job should always be run as a technical user. A technical user must follow the naming and configuration convention as defined in the whitepaper.</description>
+        <documentation_url>https://www.wildgrube.com/download/A%20mature%20Development%20and%20Deployment%20Process.pdf</documentation_url>
+        <finding_type>scan_finding</finding_type>
+        <name>DataSanity - Scheduled Jobs run by technical users</name>
+        <priority>1</priority>
+        <resolution_details>Change the run_as user of the identified Scheduled Jobs to a technical user. It may be considered to turn the default "System Administrator" user into a technical user as the user is associated with the majority of OOTB Scheduled Jobs.</resolution_details>
+        <run_condition/>
+        <score_max>100</score_max>
+        <score_min>0</score_min>
+        <score_scale>1</score_scale>
+        <script><![CDATA[(function(finding) {
+
+	var grSysAuto = new GlideRecord('sysauto');
+	grSysAuto.addActiveQuery();
+	grSysAuto.addQuery('run_as','!=','');
+	grSysAuto.query();
+	var nCount = 0;
+	while (grSysAuto.next())
+	{
+		Debug(x_snc_devtools.RenderRecordSummary(grSysAuto));
+  
+		nCount++;
+		//gs.info(nCount + ': ' + grSysAuto.sys_class_name + ': ' + grSysAuto.sys_name);
+		var grUser = x_snc_devtools.GetUserRecord(grSysAuto.run_as);
+		if (x_snc_devtools.IsValidRecord(grUser))
+		{
+			if (x_snc_devtools.IsTechnicalUser(grUser) == false)
+			{
+				finding.setCurrentSource(grSysAuto);
+       			finding.increment();
+			}	
+		}
+	}
+
+/*
+	//Debug(x_snc_devtools.RenderRecordSummary(engine.current));
+    var grUser = x_snc_devtools.GetUserRecord(engine.current.run_as);
+	if (x_snc_devtools.IsValidRecord(grUser))
+	{
+		if (x_snc_devtools.IsTechnicalUser(grUser) == false)
+		{
+			engine.finding.increment();
+		}	
+	}
+	//engine.finding.increment();
+*/	
+	//gs.debug(engine.current.sys_class_name + ': ' + engine.current.sys_name);
+
+	/*
+
+
+
+*/
+
+})(finding);]]></script>
+        <short_description>Scheduled Jobs should be run as technical users</short_description>
+        <sys_class_name>scan_script_only_check</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-04 06:49:08</sys_created_on>
+        <sys_id>36b7834edb660650f0f1d03cd3961937</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>DataSanity - Scheduled Jobs run by technical users</sys_name>
+        <sys_package display_value="DataSanity WORK IN PROGRESS" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DataSanity WORK IN PROGRESS">e0746823dbad0510bcced03cd396198d</sys_scope>
+        <sys_update_name>scan_script_only_check_36b7834edb660650f0f1d03cd3961937</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-04 07:17:28</sys_updated_on>
+    </scan_script_only_check>
+    <sys_translated_text action="delete_multiple" query="documentkey=36b7834edb660650f0f1d03cd3961937"/>
+</record_update>
