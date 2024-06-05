@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="scan_check_suite_check">
     <scan_check_suite_check action="INSERT_OR_UPDATE">
-        <check display_value="DataSanity - Scheduled Jobs run by technical users">36b7834edb660650f0f1d03cd3961937</check>
+        <check display_value="DataSanity - Scheduled Jobs not run by technical users">36b7834edb660650f0f1d03cd3961937</check>
         <score_weight>1</score_weight>
         <suite display_value="DataSanity">b0e239b31b8aca90063ddc61ab4bcb0e</suite>
         <sys_class_name>scan_check_suite_check</sys_class_name>
@@ -9,9 +9,9 @@
         <sys_id>b81dcbc2dba60650f0f1d03cd39619e9</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
-        <sys_package display_value="DataSanity WORK IN PROGRESS" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
+        <sys_package display_value="DataSanity" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
         <sys_policy/>
-        <sys_scope display_value="DataSanity WORK IN PROGRESS">e0746823dbad0510bcced03cd396198d</sys_scope>
+        <sys_scope display_value="DataSanity">e0746823dbad0510bcced03cd396198d</sys_scope>
         <sys_update_name>scan_check_suite_check_b81dcbc2dba60650f0f1d03cd39619e9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-06-04 07:08:29</sys_updated_on>
