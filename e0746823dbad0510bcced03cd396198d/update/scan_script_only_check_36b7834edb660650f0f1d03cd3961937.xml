@@ -5,7 +5,7 @@
         <description>A Scheduled Job should always be run as a technical user. A technical user must follow the naming and configuration convention as defined in the whitepaper.</description>
         <documentation_url>https://www.wildgrube.com/download/A%20mature%20Development%20and%20Deployment%20Process.pdf</documentation_url>
         <finding_type>scan_finding</finding_type>
-        <name>DataSanity - Scheduled Jobs run by technical users</name>
+        <name>DataSanity - Scheduled Jobs not run by technical users</name>
         <priority>1</priority>
         <resolution_details>Change the run_as user of the identified Scheduled Jobs to a technical user. It may be considered to turn the default "System Administrator" user into a technical user as the user is associated with the majority of OOTB Scheduled Jobs.</resolution_details>
         <run_condition/>
@@ -37,14 +37,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-06-04 06:49:08</sys_created_on>
         <sys_id>36b7834edb660650f0f1d03cd3961937</sys_id>
-        <sys_mod_count>8</sys_mod_count>
-        <sys_name>DataSanity - Scheduled Jobs run by technical users</sys_name>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>DataSanity - Scheduled Jobs not run by technical users</sys_name>
         <sys_package display_value="DataSanity" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
         <sys_policy/>
         <sys_scope display_value="DataSanity">e0746823dbad0510bcced03cd396198d</sys_scope>
         <sys_update_name>scan_script_only_check_36b7834edb660650f0f1d03cd3961937</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-06-04 07:20:58</sys_updated_on>
+        <sys_updated_on>2024-06-05 12:02:42</sys_updated_on>
     </scan_script_only_check>
     <sys_translated_text action="delete_multiple" query="documentkey=36b7834edb660650f0f1d03cd3961937"/>
 </record_update>
