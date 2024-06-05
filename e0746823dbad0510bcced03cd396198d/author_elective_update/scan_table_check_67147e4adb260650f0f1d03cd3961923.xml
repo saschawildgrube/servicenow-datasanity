@@ -66,7 +66,7 @@ while (grSysAuto.next())
     <sys_translated_text action="DELETE" query="documentkey=67147e4adb260650f0f1d03cd3961923"/>
     <sys_update_version action="INSERT_OR_UPDATE">
         <action>DELETE</action>
-        <application display_value="DataSanity WORK IN PROGRESS">e0746823dbad0510bcced03cd396198d</application>
+        <application display_value="DataSanity">e0746823dbad0510bcced03cd396198d</application>
         <file_path/>
         <instance_id>bbdfc83f1ba93910699443f4bd4bcbe7</instance_id>
         <instance_name>wildvancouver</instance_name>
@@ -128,10 +128,10 @@ while (grSysAuto.next())
         <sys_metadata>67147e4adb260650f0f1d03cd3961923</sys_metadata>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>DataSanity - Scheduled Jobs run by technical users</sys_name>
-        <sys_package display_value="DataSanity WORK IN PROGRESS" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
+        <sys_package display_value="DataSanity" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
         <sys_parent/>
         <sys_policy/>
-        <sys_scope display_value="DataSanity WORK IN PROGRESS">e0746823dbad0510bcced03cd396198d</sys_scope>
+        <sys_scope display_value="DataSanity">e0746823dbad0510bcced03cd396198d</sys_scope>
         <sys_scope_delete display_value="">8dbc755711cc4f508161d9ffb07df444</sys_scope_delete>
         <sys_update_name>scan_table_check_67147e4adb260650f0f1d03cd3961923</sys_update_name>
         <sys_update_version display_value="scan_table_check_67147e4adb260650f0f1d03cd3961923">de294bcedb660650f0f1d03cd3961959</sys_update_version>
