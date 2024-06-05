@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from/>
+        <description>Run Server Side Validation Script</description>
+        <display_name>Run Server Side Script</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>1</order>
+        <step_config display_value="Run Server Side Script">41de4a935332120028bc29cac2dc349a</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-05 09:11:23</sys_created_on>
+        <sys_id>adc278261bae8650063ddc61ab4bcb0f</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Run Server Side Script</sys_name>
+        <sys_package display_value="DataSanity" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DataSanity">e0746823dbad0510bcced03cd396198d</sys_scope>
+        <sys_update_name>sys_atf_step_adc278261bae8650063ddc61ab4bcb0f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-05 09:22:14</sys_updated_on>
+        <table/>
+        <test display_value="DataSanity - Invalid technical users">55b2b4261bae8650063ddc61ab4bcb3f</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=adc278261bae8650063ddc61ab4bcb0f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>adc278261bae8650063ddc61ab4bcb0f</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-05 09:11:23</sys_created_on>
+        <sys_id>8fc278261bae8650063ddc61ab4bcb20</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-05 09:11:23</sys_updated_on>
+        <value>3.1</value>
+        <variable display_value="Jasmine version">42f2564b73031300440211d8faf6a777</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>adc278261bae8650063ddc61ab4bcb0f</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-05 09:11:23</sys_created_on>
+        <sys_id>c7c278261bae8650063ddc61ab4bcb78</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-05 09:22:15</sys_updated_on>
+        <value>(function(outputs, steps, stepResult, assertEqual)&#13;
+{&#13;
+	var test = new x_snc_devtools.TestAPI(outputs, steps, stepResult, assertEqual);&#13;
+	&#13;
+	test.SetResult(true);&#13;
+&#13;
+	var strCheck = 'e7fcdc6e1b2e8650063ddc61ab4bcb41';&#13;
+	&#13;
+	var grRecord = new GlideRecord('sys_user');&#13;
+	grRecord.initialize();&#13;
+	grRecord.user_name = 'firstname.lastname';&#13;
+	grRecord.first_name = 'firstname';&#13;
+	grRecord.last_name = 'lastname';&#13;
+	var strRecordSysId = x_snc_devtools.GlideRecordInsert(grRecord);&#13;
+	test.TestCase_InstanceScanCheck(strCheck,'sys_user',strRecordSysId,false);&#13;
+&#13;
+	var grRecord = new GlideRecord('sys_user');&#13;
+	grRecord.initialize();&#13;
+	grRecord.user_name = 'firstname.lastname2';&#13;
+	grRecord.first_name = 'firstname';&#13;
+	grRecord.last_name = 'lastname2';&#13;
+	grRecord.web_service_access_only = true;&#13;
+	var strRecordSysId = x_snc_devtools.GlideRecordInsert(grRecord);&#13;
+	test.TestCase_InstanceScanCheck(strCheck,'sys_user',strRecordSysId,true);	&#13;
+&#13;
+	var grRecord = new GlideRecord('sys_user');&#13;
+	grRecord.initialize();&#13;
+	grRecord.user_name = 'firstname.lastname3';&#13;
+	grRecord.first_name = 'firstname';&#13;
+	grRecord.last_name = 'lastname3';&#13;
+	grRecord.internal_integration_user = true;&#13;
+	var strRecordSysId = x_snc_devtools.GlideRecordInsert(grRecord);&#13;
+	test.TestCase_InstanceScanCheck(strCheck,'sys_user',strRecordSysId,true);	&#13;
+&#13;
+	var grRecord = new GlideRecord('sys_user');&#13;
+	grRecord.initialize();&#13;
+	grRecord.user_name = 'technical.invalid1';&#13;
+	grRecord.first_name = 'Technical';&#13;
+	grRecord.last_name = 'Invalid1';&#13;
+	var strRecordSysId = x_snc_devtools.GlideRecordInsert(grRecord);&#13;
+	test.TestCase_InstanceScanCheck(strCheck,'sys_user',strRecordSysId,true);		&#13;
+&#13;
+	var grRecord = new GlideRecord('sys_user');&#13;
+	grRecord.initialize();&#13;
+	grRecord.user_name = 'technical.invalid2';&#13;
+	grRecord.first_name = 'Techuser';&#13;
+	grRecord.last_name = 'Invalid2';&#13;
+	var strRecordSysId = x_snc_devtools.GlideRecordInsert(grRecord);&#13;
+	test.TestCase_InstanceScanCheck(strCheck,'sys_user',strRecordSysId,true);		&#13;
+	&#13;
+	var grRecord = new GlideRecord('sys_user');&#13;
+	grRecord.initialize();&#13;
+	grRecord.user_name = 'technical.valid1';&#13;
+	grRecord.first_name = 'Technical';&#13;
+	grRecord.last_name = 'Valid 1';&#13;
+	grRecord.web_service_access_only = true;&#13;
+	var strRecordSysId = x_snc_devtools.GlideRecordInsert(grRecord);&#13;
+	test.TestCase_InstanceScanCheck(strCheck,'sys_user',strRecordSysId,false);	&#13;
+&#13;
+	var grRecord = new GlideRecord('sys_user');&#13;
+	grRecord.initialize();&#13;
+	grRecord.user_name = 'technical.valid2';&#13;
+	grRecord.first_name = 'Technical';&#13;
+	grRecord.last_name = 'Valid 2';&#13;
+	grRecord.internal_integration_user = true;&#13;
+	var strRecordSysId = x_snc_devtools.GlideRecordInsert(grRecord);&#13;
+	test.TestCase_InstanceScanCheck(strCheck,'sys_user',strRecordSysId,false);	&#13;
+&#13;
+	return test.GetResult();&#13;
+	&#13;
+})(outputs, steps, stepResult, assertEqual);</value>
+        <variable display_value="Test script">989d9e235324220002c6435723dc3484</variable>
+    </sys_variable_value>
+</record_update>

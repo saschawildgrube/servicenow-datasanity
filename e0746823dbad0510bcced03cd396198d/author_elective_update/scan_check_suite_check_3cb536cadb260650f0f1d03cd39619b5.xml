@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="scan_check_suite_check">
+    <scan_check_suite_check action="DELETE">
+        <check display_value="DataSanity - Scheduled Jobs run by technical users">67147e4adb260650f0f1d03cd3961923</check>
+        <score_weight>1</score_weight>
+        <suite display_value="DataSanity">b0e239b31b8aca90063ddc61ab4bcb0e</suite>
+        <sys_class_name>scan_check_suite_check</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-04 05:26:22</sys_created_on>
+        <sys_id>3cb536cadb260650f0f1d03cd39619b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DataSanity WORK IN PROGRESS" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DataSanity WORK IN PROGRESS">e0746823dbad0510bcced03cd396198d</sys_scope>
+        <sys_update_name>scan_check_suite_check_3cb536cadb260650f0f1d03cd39619b5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-04 05:26:22</sys_updated_on>
+    </scan_check_suite_check>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="DataSanity">e0746823dbad0510bcced03cd396198d</application>
+        <file_path/>
+        <instance_id>bbdfc83f1ba93910699443f4bd4bcbe7</instance_id>
+        <instance_name>wildvancouver</instance_name>
+        <name>scan_check_suite_check_3cb536cadb260650f0f1d03cd39619b5</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="scan_check_suite_check"><scan_check_suite_check action="INSERT_OR_UPDATE"><check display_value="DataSanity - Scheduled Jobs run by technical users">67147e4adb260650f0f1d03cd3961923</check><score_weight>1</score_weight><suite display_value="DataSanity">b0e239b31b8aca90063ddc61ab4bcb0e</suite><sys_class_name>scan_check_suite_check</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-06-04 05:26:22</sys_created_on><sys_id>3cb536cadb260650f0f1d03cd39619b5</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="DataSanity WORK IN PROGRESS" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package><sys_policy/><sys_scope display_value="DataSanity WORK IN PROGRESS">e0746823dbad0510bcced03cd396198d</sys_scope><sys_update_name>scan_check_suite_check_3cb536cadb260650f0f1d03cd39619b5</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-06-04 05:26:22</sys_updated_on></scan_check_suite_check></record_update>]]></payload>
+        <payload_hash>-749988970</payload_hash>
+        <record_name>67147e4adb260650f0f1d03cd3961923</record_name>
+        <reverted_from/>
+        <source>1806fd771b8aca90063ddc61ab4bcbec</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-04 05:26:22</sys_created_on>
+        <sys_id>7cb576cadb260650f0f1d03cd396197f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18fe1b675770000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-04 05:26:22</sys_updated_on>
+        <type>Suite Check</type>
+        <update_guid>70b536cad126065004d4478d061967b8</update_guid>
+        <update_guid_history>70b536cad126065004d4478d061967b8:-749988970</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">c0fe0b46dba60650f0f1d03cd3961958</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-04 07:16:38</sys_created_on>
+        <sys_db_object display_value="" name="scan_check_suite_check">scan_check_suite_check</sys_db_object>
+        <sys_id>85137b20380a436b9c03123a5ecc8071</sys_id>
+        <sys_metadata>3cb536cadb260650f0f1d03cd39619b5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="DataSanity" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="DataSanity">e0746823dbad0510bcced03cd396198d</sys_scope>
+        <sys_scope_delete display_value="">8dbc755711cc4f508161d9ffb07df444</sys_scope_delete>
+        <sys_update_name>scan_check_suite_check_3cb536cadb260650f0f1d03cd39619b5</sys_update_name>
+        <sys_update_version display_value="scan_check_suite_check_3cb536cadb260650f0f1d03cd39619b5">7cb576cadb260650f0f1d03cd396197f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-04 07:16:38</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -6,12 +6,13 @@
         <conditions/>
         <description>A persona role is a role that represents a persona. Such persona roles are named after the persona and contain whatever specific other roles required to allow (and deny) access to the users that belong to that persona. As every other role it should not be assigned to individual users but to groups - except in case of test and technical users.&#13;
 For example: the “Help Desk Agents”  persona would be represented by a “persona_helpdesk_agent” persona role (which is part of an application) and the persona_helpdesk_agent role would then contain sn_incident_read role (and probably also sn_incident_write and many other existing OOTB roles).&#13;
-Persona roles should be prefixed by the application scope name followed by “.persona_” – e.g., “x_yourprefix_personas.persona_helpdesk_agent”.</description>
+Persona roles should be prefixed by the application scope name followed by “.persona_” – e.g., “x_yourprefix_personas.persona_helpdesk_agent”.&#13;
+Exceptions are the roles "admin" and "security_admin" which can be assigned to a group. Whether administrators represent their own persona is debateable. A persona representing administrators certainly does not hurt, but it is not mandatory either.</description>
         <documentation_url>https://www.wildgrube.com/download/A%20mature%20Development%20and%20Deployment%20Process.pdf</documentation_url>
         <finding_type>scan_finding</finding_type>
         <name>DataSanity - Groups with non-persona roles</name>
         <priority>1</priority>
-        <resolution_details>Remove all non-persona role assignments from the group. Assign the appropriate persona role to the group. If no appropriate persona role exists, confirm the creation of a new persona role. If no appropriate persona exists, confirm with business stakeholders about the introduction of a new persona.&#13;
+        <resolution_details>Remove all non-persona and non-admin role assignments from the group. Assign the appropriate persona role to the group. If no appropriate persona role exists, confirm the creation of a new persona role. If no appropriate persona exists, confirm with business stakeholders about the introduction of a new persona.&#13;
 If no persona definition exists in the first place, that topic should be addressed.</resolution_details>
         <run_condition/>
         <score_max>100</score_max>
@@ -28,27 +29,36 @@ If no persona definition exists in the first place, that topic should be address
 		if (grRole != false)
 		{
 			var strRoleName = x_snc_devtools.GetStringValue(grRole.name);
-			if (strRoleName.indexOf('.persona_') == -1)
+			if (strRoleName == 'admin')
 			{
-				engine.finding.increment();
+				continue;
 			}
+			if (strRoleName == 'security_admin')
+			{
+				continue;
+			}
+			if (strRoleName.indexOf('.persona_') != -1)
+			{
+				continue;
+			}
+			engine.finding.increment();
 		}
 	}
 
 })(engine);]]></script>
-        <short_description>All groups are assigned to persona roles only.</short_description>
+        <short_description>All groups are assigned to persona and admin roles only.</short_description>
         <sys_class_name>scan_table_check</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-05-17 14:39:02</sys_created_on>
         <sys_id>65554cac1b5e8e90063ddc61ab4bcb7f</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>DataSanity - Groups with non-persona roles</sys_name>
         <sys_package display_value="DataSanity" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
         <sys_policy/>
         <sys_scope display_value="DataSanity">e0746823dbad0510bcced03cd396198d</sys_scope>
         <sys_update_name>scan_table_check_65554cac1b5e8e90063ddc61ab4bcb7f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-05-17 15:19:01</sys_updated_on>
+        <sys_updated_on>2024-05-27 11:35:22</sys_updated_on>
         <table>sys_user_group</table>
         <use_manifest>false</use_manifest>
     </scan_table_check>
