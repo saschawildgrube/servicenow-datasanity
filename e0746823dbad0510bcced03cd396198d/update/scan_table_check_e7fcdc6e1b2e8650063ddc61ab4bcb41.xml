@@ -27,7 +27,8 @@ This may include changing existing OOTB users.</resolution_details>
 	{
 		bPotential = true;
 	}
-	if (current.user_name.startsWith('technical.') == true)
+	var strUserName = x_snc_devtools.GetStringValue(current.user_name);
+	if (strUserName.startsWith('technical.') == true)
 	{
 		bPotential = true;
 	}	
@@ -49,14 +50,14 @@ This may include changing existing OOTB users.</resolution_details>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-06-05 07:41:03</sys_created_on>
         <sys_id>e7fcdc6e1b2e8650063ddc61ab4bcb41</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>DataSanity - Invalid technical users</sys_name>
         <sys_package display_value="DataSanity WORK IN PROGRESS" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
         <sys_policy/>
         <sys_scope display_value="DataSanity WORK IN PROGRESS">e0746823dbad0510bcced03cd396198d</sys_scope>
         <sys_update_name>scan_table_check_e7fcdc6e1b2e8650063ddc61ab4bcb41</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-06-05 09:23:25</sys_updated_on>
+        <sys_updated_on>2024-06-05 12:01:14</sys_updated_on>
         <table>sys_user</table>
         <use_manifest>false</use_manifest>
     </scan_table_check>
