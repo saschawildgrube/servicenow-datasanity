@@ -31,16 +31,16 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-02-14 08:55:13</sys_created_on>
         <sys_id>e0746823dbad0510bcced03cd396198d</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-06-05 12:18:56</sys_updated_on>
+        <sys_updated_on>2024-06-06 10:49:56</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <uninstall_blocked>false</uninstall_blocked>
         <user_role/>
         <vendor/>
         <vendor_prefix/>
-        <version>1.2.0</version>
+        <version>1.1.2</version>
         <x_snc_devtools_documentation_url>https://www.wildgrube.com/servicenow-datasanity</x_snc_devtools_documentation_url>
         <x_snc_devtools_maintainer>Sascha Wildgrube</x_snc_devtools_maintainer>
         <x_snc_devtools_maintainer_email>sascha.wildgrube@servicenow.com</x_snc_devtools_maintainer_email>
