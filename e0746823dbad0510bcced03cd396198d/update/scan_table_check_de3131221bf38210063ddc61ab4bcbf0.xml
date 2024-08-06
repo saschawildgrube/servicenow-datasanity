@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="scan_table_check">
+    <scan_table_check action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <category>data_sanity</category>
+        <conditions table="sys_user">nameISEMPTY^EQ<item endquery="false" field="name" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description>Users must have a name. Any user without a name indicates an issue with data input or data imports.</description>
+        <documentation_url/>
+        <finding_type>scan_finding</finding_type>
+        <name>DataSanity - Users without name</name>
+        <priority>1</priority>
+        <resolution_details>Remove users without user names and fix the root cause.</resolution_details>
+        <run_condition/>
+        <score_max>100</score_max>
+        <score_min>0</score_min>
+        <score_scale>1</score_scale>
+        <script><![CDATA[(function (engine) {
+
+    // Add your code here
+
+})(engine);]]></script>
+        <short_description>Users must have a name</short_description>
+        <sys_class_name>scan_table_check</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-06 17:04:08</sys_created_on>
+        <sys_id>de3131221bf38210063ddc61ab4bcbf0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DataSanity - Users without name</sys_name>
+        <sys_package display_value="DataSanity WORK IN PROGRESS" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DataSanity WORK IN PROGRESS">e0746823dbad0510bcced03cd396198d</sys_scope>
+        <sys_update_name>scan_table_check_de3131221bf38210063ddc61ab4bcbf0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-06 17:04:08</sys_updated_on>
+        <table>sys_user</table>
+        <use_manifest>false</use_manifest>
+    </scan_table_check>
+    <sys_translated_text action="delete_multiple" query="documentkey=de3131221bf38210063ddc61ab4bcbf0"/>
+</record_update>
