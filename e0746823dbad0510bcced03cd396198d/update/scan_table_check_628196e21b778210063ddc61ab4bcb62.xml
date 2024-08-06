@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="scan_table_check">
+    <scan_table_check action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>true</advanced>
+        <category>data_sanity</category>
+        <conditions/>
+        <description>Two (or more companies) with exactly the same name are an indicator of an issue with data entry or data import.</description>
+        <documentation_url/>
+        <finding_type>scan_finding</finding_type>
+        <name>DataSanity - Companies with duplicate names</name>
+        <priority>1</priority>
+        <resolution_details>Either remove duplicate records or adjust company names to be unique. Fix the underlying issue that lead to the duplicate record.</resolution_details>
+        <run_condition/>
+        <score_max>100</score_max>
+        <score_min>0</score_min>
+        <score_scale>1</score_scale>
+        <script><![CDATA[(function (engine) {
+
+    var grCompany = new GlideRecord('core_company');
+	grCompany.addQuery('name','=',current.name);
+	grCompany.addQuery('sys_id','!=',current.sys_id);
+	grCompany.query();
+	if (grCompany.next())
+	{
+		engine.finding.increment();
+	}
+
+})(engine);]]></script>
+        <short_description>Companies must have unique names</short_description>
+        <sys_class_name>scan_table_check</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-06 19:28:36</sys_created_on>
+        <sys_id>628196e21b778210063ddc61ab4bcb62</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DataSanity - Companies with duplicate names</sys_name>
+        <sys_package display_value="DataSanity" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DataSanity">e0746823dbad0510bcced03cd396198d</sys_scope>
+        <sys_update_name>scan_table_check_628196e21b778210063ddc61ab4bcb62</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-06 19:28:36</sys_updated_on>
+        <table>core_company</table>
+        <use_manifest>false</use_manifest>
+    </scan_table_check>
+    <sys_translated_text action="delete_multiple" query="documentkey=628196e21b778210063ddc61ab4bcb62"/>
+</record_update>

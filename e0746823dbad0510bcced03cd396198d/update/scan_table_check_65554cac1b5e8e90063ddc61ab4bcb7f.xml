@@ -25,7 +25,7 @@ If no persona definition exists in the first place, that topic should be address
 	grGroupHasRole.query();
 	while (grGroupHasRole.next())
 	{
-		var grRole = x_snc_devtools.GetRecord('sys_user_role',grGroupHasRole.role);
+		var grRole = x_snc_devtools.GetRoleRecord(grGroupHasRole.role);
 		if (grRole != false)
 		{
 			var strRoleName = x_snc_devtools.GetStringValue(grRole.name);
@@ -37,7 +37,7 @@ If no persona definition exists in the first place, that topic should be address
 			{
 				continue;
 			}
-			if (strRoleName.indexOf('.persona_') != -1)
+			if (x_snc_devtools.IsPersonaRole(grRole) == true)
 			{
 				continue;
 			}
@@ -51,14 +51,14 @@ If no persona definition exists in the first place, that topic should be address
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-05-17 14:39:02</sys_created_on>
         <sys_id>65554cac1b5e8e90063ddc61ab4bcb7f</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>DataSanity - Groups with non-persona roles</sys_name>
         <sys_package display_value="DataSanity" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
         <sys_policy/>
         <sys_scope display_value="DataSanity">e0746823dbad0510bcced03cd396198d</sys_scope>
         <sys_update_name>scan_table_check_65554cac1b5e8e90063ddc61ab4bcb7f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-05-27 11:35:22</sys_updated_on>
+        <sys_updated_on>2024-08-06 19:20:03</sys_updated_on>
         <table>sys_user_group</table>
         <use_manifest>false</use_manifest>
     </scan_table_check>
