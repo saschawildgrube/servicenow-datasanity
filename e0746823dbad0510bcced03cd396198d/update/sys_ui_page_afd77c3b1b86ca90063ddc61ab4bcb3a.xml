@@ -24,7 +24,7 @@
 	<h2>Features</h2> 
 	<p>The DataSanity app contains Instance Scan checks that validate data records. The checks are aimed to reveal data problems, inconsistencies and invalid records.</p>
 	<p>The checks also enforce the application of the persona role concept, described in the whitepaper&#160;<a href="https://www.wildgrube.com/download/A%20mature%20Development%20and%20Deployment%20Process.pdf" target="_blank">A mature Development and Deployment Process - How to sleep well when your 200 developers deploy apps every day</a>.</p>
-	<p>Results should be reviewed on a regular basis and countermeasures should be taken. Bad data leads to incorrect reports, bad decisions and unnecessary work.</p>
+	<p>Results should be reviewed on a regular basis and countermeasures should be taken. Bad data leads to incorrect reports, bad decisions, security issues and unnecessary work.</p>
 
 	<h2>Disclaimer</h2>
 	<g2:no_escape>$[docapi.RenderDisclaimer()]</g2:no_escape>	
@@ -161,13 +161,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-05-15 10:14:34</sys_created_on>
         <sys_id>afd77c3b1b86ca90063ddc61ab4bcb3a</sys_id>
-        <sys_mod_count>27</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_name>manual</sys_name>
         <sys_package display_value="DataSanity WORK IN PROGRESS" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
         <sys_policy/>
         <sys_scope display_value="DataSanity WORK IN PROGRESS">e0746823dbad0510bcced03cd396198d</sys_scope>
         <sys_update_name>sys_ui_page_afd77c3b1b86ca90063ddc61ab4bcb3a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-08-06 19:37:42</sys_updated_on>
+        <sys_updated_on>2024-08-06 19:40:10</sys_updated_on>
     </sys_ui_page>
 </record_update>
