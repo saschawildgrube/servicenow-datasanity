@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="scan_table_check">
+    <scan_table_check action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <category>data_sanity</category>
+        <conditions table="ast_contract">short_descriptionISEMPTY^EQ<item endquery="false" field="short_description" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description>All contracts must have a non-empty name (short_description). A contract without a name may indicate issues with data imports.</description>
+        <documentation_url/>
+        <finding_type>scan_finding</finding_type>
+        <name>DataSanity - Contracts without name</name>
+        <priority>1</priority>
+        <resolution_details>Add a name to the contract and resolve the root cause of the issue.</resolution_details>
+        <run_condition/>
+        <score_max>100</score_max>
+        <score_min>0</score_min>
+        <score_scale>1</score_scale>
+        <script><![CDATA[(function (engine) {
+
+    // Add your code here
+
+})(engine);]]></script>
+        <short_description>Contracts must have a name (short description)</short_description>
+        <sys_class_name>scan_table_check</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-06 17:18:19</sys_created_on>
+        <sys_id>b06479261bf38210063ddc61ab4bcb96</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DataSanity - Contracts without name</sys_name>
+        <sys_package display_value="DataSanity WORK IN PROGRESS" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DataSanity WORK IN PROGRESS">e0746823dbad0510bcced03cd396198d</sys_scope>
+        <sys_update_name>scan_table_check_b06479261bf38210063ddc61ab4bcb96</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-06 17:18:19</sys_updated_on>
+        <table>ast_contract</table>
+        <use_manifest>false</use_manifest>
+    </scan_table_check>
+    <sys_translated_text action="delete_multiple" query="documentkey=b06479261bf38210063ddc61ab4bcb96"/>
+</record_update>
