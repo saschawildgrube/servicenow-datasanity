@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="scan_table_check">
+    <scan_table_check action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>true</advanced>
+        <category>data_sanity</category>
+        <conditions/>
+        <description>Any (active) group should at least have one active user. Groups with no or only inactive users should also be deactivated or removed.</description>
+        <documentation_url/>
+        <finding_type>scan_finding</finding_type>
+        <name>DataSanity - Groups without users</name>
+        <priority>1</priority>
+        <resolution_details>Either&#13;
+- deactivate the group&#13;
+- remove the group&#13;
+or&#13;
+- add an activate user to the group.&#13;
+Identify the root cause that led to the group not having any users.&#13;
+</resolution_details>
+        <run_condition/>
+        <score_max>100</score_max>
+        <score_min>0</score_min>
+        <score_scale>1</score_scale>
+        <script><![CDATA[(function (engine) {
+
+	if (current.active == false)
+	{
+		return;
+	}
+
+	var grGroupMember = new GlideRecord('sys_user_grmember');
+	grGroupMember.addQuery('group','=',current.sys_id);
+	grGroupMember.query();
+	var bHasActiveUser = false;
+	while (grGroupMember.next())
+	{
+		var grUser = x_snc_devtools.GetUserRecord(grGroupMember.user);
+		if (grUser != false)
+		{
+			if (grUser.active == true)
+			{
+				bHasActiveUser = true;
+			}
+		}
+	}
+
+	if (bHasActiveUser == false)
+	{
+		engine.finding.increment();
+	}
+
+})(engine);]]></script>
+        <short_description>An active group should have at least one active user.</short_description>
+        <sys_class_name>scan_table_check</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-19 17:30:01</sys_created_on>
+        <sys_id>07a6da249316ae10ae97b4aa6aba1010</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>DataSanity - Groups without users</sys_name>
+        <sys_package display_value="DataSanity WORK IN PROGRESS" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DataSanity WORK IN PROGRESS">e0746823dbad0510bcced03cd396198d</sys_scope>
+        <sys_update_name>scan_table_check_07a6da249316ae10ae97b4aa6aba1010</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-19 17:33:21</sys_updated_on>
+        <table>sys_user_group</table>
+        <use_manifest>false</use_manifest>
+    </scan_table_check>
+    <sys_translated_text action="delete_multiple" query="documentkey=07a6da249316ae10ae97b4aa6aba1010"/>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>07a6da249316ae10ae97b4aa6aba1010</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-19 17:30:00</sys_created_on>
+        <sys_id>c677d6649316ae10ae97b4aa6aba10b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-19 17:30:00</sys_updated_on>
+        <table>scan_table_check</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
