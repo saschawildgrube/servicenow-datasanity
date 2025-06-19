@@ -14,18 +14,33 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-05-15 14:20:13</sys_created_on>
         <sys_id>541035ff1b4aca90063ddc61ab4bcb3a</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>DevTools - Check app dependencies</sys_name>
         <sys_package display_value="DataSanity" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
         <sys_policy/>
         <sys_scope display_value="DataSanity">e0746823dbad0510bcced03cd396198d</sys_scope>
         <sys_update_name>sys_atf_step_541035ff1b4aca90063ddc61ab4bcb3a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-05-15 14:20:13</sys_updated_on>
+        <sys_updated_on>2025-06-19 17:15:52</sys_updated_on>
         <table/>
         <test display_value="DataSanity - Installation">f3d77c3b1b86ca90063ddc61ab4bcb43</test>
         <timeout/>
         <warning_message/>
     </sys_atf_step>
     <sys_variable_value action="delete_multiple" query="document_key=541035ff1b4aca90063ddc61ab4bcb3a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>541035ff1b4aca90063ddc61ab4bcb3a</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-19 17:15:52</sys_created_on>
+        <sys_id>723456a09316ae10ae97b4aa6aba1047</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-19 17:15:52</sys_updated_on>
+        <value>e0746823dbad0510bcced03cd396198d</value>
+        <variable display_value="Application">abfabdb693e1aa50959b7fda2bba10e4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_atf_input_variable_e4b8e71e1bbb5d105b76777d8b4bcb35^id=541035ff1b4aca90063ddc61ab4bcb3a"/>
 </record_update>
