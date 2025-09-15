@@ -78,28 +78,9 @@
 	<h3>Tables</h3>
 	<g2:no_escape>$[docapi.RenderTables()]</g2:no_escape>			
 
-<!--
-	<h3>UI Actions</h3>
-	<g2:no_escape>$[docapi.RenderUIActions()]</g2:no_escape>		
--->	
 	<h3>Script Includes</h3>
 	<g2:no_escape>$[docapi.RenderScriptIncludes()]</g2:no_escape>
-<!--	
-	<h3>UI Scripts</h3>
-	<g2:no_escape>$[docapi.RenderUIScripts()]</g2:no_escape>	
 
-	<h3>REST APIs</h3>
-	<g2:no_escape>$[docapi.RenderRestApis()]</g2:no_escape>		
-	
-	<h3>Test step configurations</h3>
-	<g2:no_escape>$[docapi.RenderTestStepConfigurations()]</g2:no_escape>
-
-	<h3>Extension Points</h3>
-	<g2:no_escape>$[docapi.RenderExtensionPoints()]</g2:no_escape>		
-
-	<h3>Business Rules</h3>
-	<g2:no_escape>$[docapi.RenderBusinessRules()]</g2:no_escape>	
--->
 
 	<h2>Dependencies</h2>
 	<g2:no_escape>$[docapi.RenderDependencies()]</g2:no_escape>		
@@ -188,14 +169,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-05-15 10:14:34</sys_created_on>
         <sys_id>afd77c3b1b86ca90063ddc61ab4bcb3a</sys_id>
-        <sys_mod_count>43</sys_mod_count>
+        <sys_mod_count>44</sys_mod_count>
         <sys_name>manual</sys_name>
         <sys_package display_value="DataSanity WORK IN PROGRESS" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
         <sys_policy/>
         <sys_scope display_value="DataSanity WORK IN PROGRESS">e0746823dbad0510bcced03cd396198d</sys_scope>
         <sys_update_name>sys_ui_page_afd77c3b1b86ca90063ddc61ab4bcb3a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-09-15 14:56:42</sys_updated_on>
+        <sys_updated_on>2025-09-15 15:49:14</sys_updated_on>
     </sys_ui_page>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>afd77c3b1b86ca90063ddc61ab4bcb3a</id>
