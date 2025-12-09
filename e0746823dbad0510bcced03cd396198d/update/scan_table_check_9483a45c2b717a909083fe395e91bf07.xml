@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="scan_table_check">
+    <scan_table_check action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>true</advanced>
+        <category>data_sanity</category>
+        <conditions/>
+        <description>Active users (which are not locked-out) must be a member in at least one active group. A user that is not a member of any group indicates incorrect data import from a directory or an insufficient security and access regime.</description>
+        <documentation_url/>
+        <finding_type>scan_finding</finding_type>
+        <name>DataSanity - Users without group</name>
+        <priority>1</priority>
+        <resolution_details>Deactivate, delete such users or make them member of an active group.</resolution_details>
+        <run_condition/>
+        <score_max>100</score_max>
+        <score_min>0</score_min>
+        <score_scale>1</score_scale>
+        <script><![CDATA[(function (engine) {
+
+	if (current.active == false)
+	{
+		return;
+	}
+	if (current.locked_out == true)
+	{
+		return;
+	}
+	if (x_snc_devtools.IsTechnicalUser(current) == true)
+	{
+		return;
+	}
+
+	var grGroupMember = new GlideRecord('sys_user_grmember');
+	grGroupMember.addQuery('user','=',current.sys_id);
+	grGroupMember.query();
+	var bActiveGroup = false;
+	while (grGroupMember.next() && !bActiveGroup)
+	{
+		var grGroup = x_snc_devtools.GetRecord('sys_user_group',grGroupMember.group);
+		if (x_snc_devtools.IsValidRecord(grGroup) == true)
+		{
+			if (grGroup.active == true)
+			{
+				bActiveGroup = true;
+			}
+		}
+	}
+
+	if (bActiveGroup == false)
+	{
+		engine.finding.increment();
+	}
+
+	
+
+})(engine);]]></script>
+        <short_description>Users must be member of a group</short_description>
+        <sys_class_name>scan_table_check</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-09 14:04:38</sys_created_on>
+        <sys_id>9483a45c2b717a909083fe395e91bf07</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>DataSanity - Users without group</sys_name>
+        <sys_package display_value="DataSanity WORK IN PROGRESS" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DataSanity WORK IN PROGRESS">e0746823dbad0510bcced03cd396198d</sys_scope>
+        <sys_update_name>scan_table_check_9483a45c2b717a909083fe395e91bf07</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-09 14:45:58</sys_updated_on>
+        <table>sys_user</table>
+        <use_manifest>false</use_manifest>
+    </scan_table_check>
+    <sys_translated_text action="delete_multiple" query="documentkey=9483a45c2b717a909083fe395e91bf07"/>
+</record_update>
