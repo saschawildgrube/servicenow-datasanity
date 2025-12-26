@@ -94,12 +94,21 @@
 	
 	<h2 toc-ignore-children="true">Release Notes</h2>
 
+	<h3>1.5.0 - 2025-12-26</h3>
+	<ol>
+		<li>DevTools 1.135.0 is now required.</li>
+		<li>Added Check "DataSanity - Users without group".</li>
+		<li>Improved test "DataSanity - Companies with duplicate names" to work if the instance is configured to prevent companies with duplicate names.</li>
+		<li>Added ACL for manual UI page.</li>
+	</ol>
+
+
 	<h3>1.4.0 - 2025-09-16</h3>
 	<ol>
 		<li>DevTools 1.132.0 is now required.</li>
 		<li>Xanadu is no longer actively supported.</li>
 		<li>DataSanity is fully tested with Zurich.</li>
-		<li>Added check "DataSanity - Locations without name".</li>
+		<li>Added Check "DataSanity - Locations without name".</li>
 	</ol>
 
 
@@ -108,7 +117,7 @@
 		<li>DevTools 1.124.0 is now required.</li>
 		<li>Vancouver and Washington are no longer actively supported.</li>
 		<li>DataSanity is tested with Xanadu and Yokohama.</li>
-		<li>Added check "DataSanity - Groups without users".</li>
+		<li>Added Check "DataSanity - Groups without users".</li>
 		<li>Check "DataSanity - Companies with duplicate names" was not part of the DataSanity scan suite. This has been fixed.</li>
 		<li>Installation instructions now also include running the Test Suite.</li>
 		<li>AppInstall() now uses InstallerAPI::ChoiceInsertOrUpdate().</li>
@@ -118,9 +127,9 @@
 	<h3>1.2.0 - 2024-08-06</h3>
 	<ol>
 		<li>DevTools 1.97.0 is now required.</li>
-		<li>Added check "DataSanity - Users without name".</li>
-		<li>Added check "DataSanity - Contracts without name".</li>
-		<li>Added check "DataSanity - Companies with duplicate names".</li>
+		<li>Added Check "DataSanity - Users without name".</li>
+		<li>Added Check "DataSanity - Contracts without name".</li>
+		<li>Added Check "DataSanity - Companies with duplicate names".</li>
 		<li>Check "Users must have a non-empty user name (User ID)" no longer creates findings for locked out users.</li>
 		<li>Check "DataSanity - Companies without names" has been renamed to "DataSanity - Companies without name".</li>
 		<li>Refactored check "DataSanity - Groups with non-persona roles" to use DevTools' IsPersonaRole() and GetRoleRecord() functions.</li>
@@ -135,16 +144,16 @@
 
 	<h3>1.1.1 - 2024-06-05</h3>
 	<ol>
-		<li>The check "DataSanity - Invalid technical users" passed all tests but caused an evaluator error when executed as part of a full instance scan triggered by the GUI. The evaluator error indicated that the method startsWith() was not defined (although it is). Yet another example of random scripting behavior. However this has been fixed.</li>  
-		<li>Renamed the check "DataSanity - Scheduled Jobs run by technical users" to "DataSanity - Scheduled Jobs not run by technical users" for consistency.</li>
+		<li>The Check "DataSanity - Invalid technical users" passed all tests but caused an evaluator error when executed as part of a full instance scan triggered by the GUI. The evaluator error indicated that the method startsWith() was not defined (although it is). Yet another example of random scripting behavior. However this has been fixed.</li>  
+		<li>Renamed the Check "DataSanity - Scheduled Jobs run by technical users" to "DataSanity - Scheduled Jobs not run by technical users" for consistency.</li>
 	</ol>
 
 
 	<h3>1.1.0 - 2024-06-05</h3>
 	<ol>
 		<li>DevTools 1.87.0 is now required.</li>
-		<li>Added check "DataSanity - Scheduled Jobs run by technical users".</li>
-		<li>Added check "DataSanity - Invalid technical users".</li>
+		<li>Added Check "DataSanity - Scheduled Jobs run by technical users".</li>
+		<li>Added Check "DataSanity - Invalid technical users".</li>
 		<li>The check "DataSanity - Groups with non-persona roles" now allows the admin and security_admin roles to be assigned to groups directly.</li>
 	</ol>
 
@@ -169,14 +178,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-05-15 10:14:34</sys_created_on>
         <sys_id>afd77c3b1b86ca90063ddc61ab4bcb3a</sys_id>
-        <sys_mod_count>45</sys_mod_count>
+        <sys_mod_count>50</sys_mod_count>
         <sys_name>manual</sys_name>
         <sys_package display_value="DataSanity" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
         <sys_policy/>
         <sys_scope display_value="DataSanity">e0746823dbad0510bcced03cd396198d</sys_scope>
         <sys_update_name>sys_ui_page_afd77c3b1b86ca90063ddc61ab4bcb3a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-09-16 08:32:46</sys_updated_on>
+        <sys_updated_on>2025-12-26 18:47:46</sys_updated_on>
     </sys_ui_page>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>afd77c3b1b86ca90063ddc61ab4bcb3a</id>
