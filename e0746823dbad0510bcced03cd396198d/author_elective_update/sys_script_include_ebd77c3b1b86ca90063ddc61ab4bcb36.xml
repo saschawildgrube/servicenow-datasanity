@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_datasanity.DevToolsGetInstancePipelineName</api_name>
+        <caller_access>1</caller_access>
+        <client_callable>false</client_callable>
+        <description>The function DevToolsGetInstancePipelineName is called by the DevTools extension point instance class and returns the pipeline name of an instance based on the given actual name.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>DevToolsGetInstancePipelineName</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[function DevToolsGetInstancePipelineName(strInstanceName)
+{
+	return '';
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-05-15 10:14:34</sys_created_on>
+        <sys_id>ebd77c3b1b86ca90063ddc61ab4bcb36</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>DevToolsGetInstancePipelineName</sys_name>
+        <sys_package display_value="DataSanity WORK IN PROGRESS" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DataSanity WORK IN PROGRESS">e0746823dbad0510bcced03cd396198d</sys_scope>
+        <sys_update_name>sys_script_include_ebd77c3b1b86ca90063ddc61ab4bcb36</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-05-15 14:22:18</sys_updated_on>
+        <x_snc_devtools_sys_ui_script/>
+    </sys_script_include>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="DataSanity WORK IN PROGRESS">e0746823dbad0510bcced03cd396198d</application>
+        <file_path/>
+        <instance_id>a8cbb5133b6b5e540fd412c5e4e45a1f</instance_id>
+        <instance_name>wildyokohama</instance_name>
+        <name>sys_script_include_ebd77c3b1b86ca90063ddc61ab4bcb36</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;
+    &lt;sys_script_include action="INSERT_OR_UPDATE"&gt;
+        &lt;access&gt;public&lt;/access&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;api_name&gt;x_snc_datasanity.DevToolsGetInstancePipelineName&lt;/api_name&gt;
+        &lt;caller_access&gt;1&lt;/caller_access&gt;
+        &lt;client_callable&gt;false&lt;/client_callable&gt;
+        &lt;description&gt;The function DevToolsGetInstancePipelineName is called by the DevTools extension point instance class and returns the pipeline name of an instance based on the given actual name.&lt;/description&gt;
+        &lt;mobile_callable&gt;false&lt;/mobile_callable&gt;
+        &lt;name&gt;DevToolsGetInstancePipelineName&lt;/name&gt;
+        &lt;sandbox_callable&gt;false&lt;/sandbox_callable&gt;
+        &lt;script&gt;&lt;![CDATA[function DevToolsGetInstancePipelineName(strInstanceName)
+{
+	return '';
+}]]&gt;&lt;/script&gt;
+        &lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2024-05-15 10:14:34&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;ebd77c3b1b86ca90063ddc61ab4bcb36&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;DevToolsGetInstancePipelineName&lt;/sys_name&gt;
+        &lt;sys_package display_value="DataSanity WORK IN PROGRESS" source="x_snc_datasanity"&gt;e0746823dbad0510bcced03cd396198d&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="DataSanity WORK IN PROGRESS"&gt;e0746823dbad0510bcced03cd396198d&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_script_include_ebd77c3b1b86ca90063ddc61ab4bcb36&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2024-05-15 14:22:18&lt;/sys_updated_on&gt;
+        &lt;x_snc_devtools_sys_ui_script/&gt;
+    &lt;/sys_script_include&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>-176222598</payload_hash>
+        <record_name>DevToolsGetInstancePipelineName</record_name>
+        <reverted_from/>
+        <source>eacf8d342befaa109083fe395e91bf66</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2025-08-21 10:13:57</sys_created_on>
+        <sys_id>7cdf01742befaa109083fe395e91bf38</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>198cc1ef4c50000001</sys_recorded_at>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2025-08-21 10:13:57</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>b4df017486efaa10c7c37de6e3b5c938</update_guid>
+        <update_guid_history>b4df017486efaa10c7c37de6e3b5c938:0,47d876647b56e610982567cc8f04f55b:0,17cca2282316e6109de535cad8d146e5:0,81ee894956fc2a10e533178848b99bf6:1845956446</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-03-31 14:08:04</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>2f927f4c881d46808a8d4b56117fb6c4</sys_id>
+        <sys_metadata>ebd77c3b1b86ca90063ddc61ab4bcb36</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DevToolsGetInstancePipelineName</sys_name>
+        <sys_package display_value="DataSanity WORK IN PROGRESS" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="DataSanity WORK IN PROGRESS">e0746823dbad0510bcced03cd396198d</sys_scope>
+        <sys_scope_delete display_value="">8dbc755711cc4f508161d9ffb07df444</sys_scope_delete>
+        <sys_update_name>sys_script_include_ebd77c3b1b86ca90063ddc61ab4bcb36</sys_update_name>
+        <sys_update_version display_value="sys_script_include_ebd77c3b1b86ca90063ddc61ab4bcb36">7cdf01742befaa109083fe395e91bf38</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-03-31 14:08:04</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
