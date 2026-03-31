@@ -4,6 +4,7 @@
         <can_delegate>true</can_delegate>
         <description>Provides access to the DataSanity application.</description>
         <elevated_privilege>false</elevated_privilege>
+        <federated_id>hYyCINb3+7jAgciVvABQg6VL/B1Fx5X2yGOBCrOl0dk=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_snc_datasanity.admin</name>
