@@ -5,16 +5,13 @@
         <api_name>x_snc_datasanity.DevTools</api_name>
         <caller_access>1</caller_access>
         <client_callable>false</client_callable>
-        <description>Implements the extension point for DevTools.
-|
-Methods:
-* initialize()
-* GetParentRecord()
-* GetLinkDirectory()
-* GetFormatConfig()
-* GetApplicationStatus()
-* RenderDebugDump()
-* GetInstancePipelineName()</description>
+        <description>Implements the extension point for DevTools.&#13;
+|&#13;
+Methods:&#13;
+* initialize()&#13;
+* GetParentRecord()&#13;
+* GetLinkDirectory()&#13;
+* RenderDebugDump()</description>
         <mobile_callable>false</mobile_callable>
         <name>DevTools</name>
         <sandbox_callable>false</sandbox_callable>
@@ -44,25 +41,6 @@ DevTools.prototype = {
 		return linkdirectory;
 	},
 
-	GetFormatConfig: function(grRecord)
-	{
-		var IsFunction = x_snc_devtools.IsFunction;
-		if (IsFunction(x_snc_datasanity.DevToolsGetFormatConfig))
-		{
-			return DevToolsGetFormatConfig(grRecord);
-		}
-		return false;
-	},	
-	
-	GetApplicationStatus: function(status)
-	{
-		var IsFunction = x_snc_devtools.IsFunction;
-		if (IsFunction(x_snc_datasanity.DevToolsGetApplicationStatus))
-		{
-			status = DevToolsGetApplicationStatus(status);
-		}
-		return status;
-	},		
 
 	RenderDebugDump: function()
 	{
@@ -75,32 +53,20 @@ DevTools.prototype = {
 		return strDebug;
 	},		
 	
-	GetInstancePipelineName: function(strInstanceName)
-	{
-		var IsFunction = x_snc_devtools.IsFunction;
-		var strInstancePipelineName = '';
-		if (IsFunction(x_snc_datasanity.DevToolsGetInstancePipelineName))
-		{
-			strInstancePipelineName = x_snc_devtools.GetStringValue(DevToolsGetInstancePipelineName(strInstanceName));
-		}
-		return strInstancePipelineName;	
-	},
-
-	
 	type: 'DevTools'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-05-15 10:14:32</sys_created_on>
         <sys_id>1fd73c3b1b86ca90063ddc61ab4bcbe0</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>DevTools</sys_name>
         <sys_package display_value="DataSanity WORK IN PROGRESS" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
         <sys_policy/>
         <sys_scope display_value="DataSanity WORK IN PROGRESS">e0746823dbad0510bcced03cd396198d</sys_scope>
         <sys_update_name>sys_script_include_1fd73c3b1b86ca90063ddc61ab4bcbe0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-11 07:46:02</sys_updated_on>
+        <sys_updated_on>2026-08-27 11:16:25</sys_updated_on>
         <x_snc_devtools_sys_ui_script/>
     </sys_script_include>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
