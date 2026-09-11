@@ -5,7 +5,7 @@
         <assessment/>
         <device_type/>
         <filter table="syslog_app_scope">sys_created_onONLast 30 minutes@javascript:gs.beginningOfLast30Minutes()@javascript:gs.endOfLast30Minutes()^sys_scope=e0746823dbad0510bcced03cd396198d<item endquery="false" field="sys_created_on" goto="false" newquery="false" operator="ON" or="false" value="Last 30 minutes@javascript:gs.beginningOfLast30Minutes()@javascript:gs.endOfLast30Minutes()"/>
-            <item display_table="sys_scope" display_value="DataSanity WORK IN PROGRESS" endquery="false" field="sys_scope" goto="false" newquery="false" operator="=" or="false" value="e0746823dbad0510bcced03cd396198d"/>
+            <item display_table="sys_scope" display_value="DataSanity" endquery="false" field="sys_scope" goto="false" newquery="false" operator="=" or="false" value="e0746823dbad0510bcced03cd396198d"/>
         </filter>
         <hint/>
         <homepage/>
@@ -30,9 +30,9 @@
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Log</sys_name>
         <sys_overrides/>
-        <sys_package display_value="DataSanity WORK IN PROGRESS" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
+        <sys_package display_value="DataSanity" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
         <sys_policy/>
-        <sys_scope display_value="DataSanity WORK IN PROGRESS">e0746823dbad0510bcced03cd396198d</sys_scope>
+        <sys_scope display_value="DataSanity">e0746823dbad0510bcced03cd396198d</sys_scope>
         <sys_update_name>sys_app_module_d8e77c3b1b86ca90063ddc61ab4bcba4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-05-15 10:14:37</sys_updated_on>
