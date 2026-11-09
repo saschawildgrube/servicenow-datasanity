@@ -23,6 +23,7 @@
         <scope>x_snc_datasanity</scope>
         <scoped_administration>false</scoped_administration>
         <short_description>DataSanity contains Instance Scan checks that verify data quality.</short_description>
+        <sn_managed>false</sn_managed>
         <source>x_snc_datasanity</source>
         <store_correlation_id/>
         <store_url/>
