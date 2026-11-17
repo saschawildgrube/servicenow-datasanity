@@ -18,9 +18,7 @@ The OOTB technical user "playbook.automation_runner" is considered as an excepti
         <score_scale>1</score_scale>
         <script><![CDATA[(function (engine) {
 
-    Log(x_snc_devtools.GetRecord('sys_user',current));
-
-	var strUserName = x_snc_devtools.GetStringValue(current.user_name);
+ 	var strUserName = x_snc_devtools.GetStringValue(current.user_name);
 
 	if (strUserName == 'playbook.automation_runner')
 	{
@@ -49,14 +47,14 @@ The OOTB technical user "playbook.automation_runner" is considered as an excepti
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-09-08 08:15:36</sys_created_on>
         <sys_id>249c050483d34b50ac13b410feaad3ad</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>DataSanity - Users without Identity Type</sys_name>
         <sys_package display_value="DataSanity WORK IN PROGRESS" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
         <sys_policy/>
         <sys_scope display_value="DataSanity WORK IN PROGRESS">e0746823dbad0510bcced03cd396198d</sys_scope>
         <sys_update_name>scan_table_check_249c050483d34b50ac13b410feaad3ad</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-11-17 09:08:17</sys_updated_on>
+        <sys_updated_on>2026-11-17 09:21:49</sys_updated_on>
         <table>sys_user</table>
         <use_manifest>false</use_manifest>
     </scan_table_check>

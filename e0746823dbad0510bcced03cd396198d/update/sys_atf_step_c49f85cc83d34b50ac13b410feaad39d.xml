@@ -14,14 +14,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-09-08 08:23:58</sys_created_on>
         <sys_id>c49f85cc83d34b50ac13b410feaad39d</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Run Server Side Script</sys_name>
         <sys_package display_value="DataSanity WORK IN PROGRESS" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
         <sys_policy/>
         <sys_scope display_value="DataSanity WORK IN PROGRESS">e0746823dbad0510bcced03cd396198d</sys_scope>
         <sys_update_name>sys_atf_step_c49f85cc83d34b50ac13b410feaad39d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-11-17 09:10:29</sys_updated_on>
+        <sys_updated_on>2026-11-17 09:22:24</sys_updated_on>
         <table/>
         <test display_value="DataSanity - Users without Identity Type">ff8f85cc83d34b50ac13b410feaad30e</test>
         <timeout/>
@@ -50,9 +50,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-09-08 08:23:58</sys_created_on>
         <sys_id>8c9f85cc83d34b50ac13b410feaad3a1</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-11-17 09:10:29</sys_updated_on>
+        <sys_updated_on>2026-11-17 09:22:25</sys_updated_on>
         <value>(function(outputs, steps, stepResult, assertEqual)&#13;
 {&#13;
 	var test = new x_snc_devtools.TestAPI(outputs, steps, stepResult, assertEqual);&#13;
@@ -68,8 +68,6 @@
 	grRecord.name = 'TEST Bad 1';&#13;
 	grRecord.identity_type = '';&#13;
 	var strRecordSysId = x_snc_devtools.GlideRecordInsert(grRecord);&#13;
-	//x_snc_devtools.RecordSetValue('sys_user',strRecordSysId,'identity_type','unclassified',true); &#13;
-	test.Log(x_snc_devtools.GetUserRecord(strRecordSysId));&#13;
 	test.TestCase_InstanceScanCheck(strCheck,'sys_user',strRecordSysId,true);&#13;
 &#13;
 	var grRecord = new GlideRecord('sys_user');&#13;
@@ -77,8 +75,6 @@
 	grRecord.name = 'TEST Bad 2';&#13;
 	grRecord.identity_type = 'unclassified';&#13;
 	var strRecordSysId = x_snc_devtools.GlideRecordInsert(grRecord);&#13;
-	//x_snc_devtools.RecordSetValue('sys_user',strRecordSysId,'identity_type','unclassified',true); &#13;
-	test.Log(x_snc_devtools.GetUserRecord(strRecordSysId));&#13;
 	test.TestCase_InstanceScanCheck(strCheck,'sys_user',strRecordSysId,true);&#13;
 	&#13;
 	// Test cases that do NOT provoke findings:&#13;
