@@ -16,9 +16,9 @@
         <sys_id>3a2539661bf38210063ddc61ab4bcb91</sys_id>
         <sys_mod_count>2</sys_mod_count>
         <sys_name>Run Server Side Script</sys_name>
-        <sys_package display_value="DataSanity WORK IN PROGRESS" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
+        <sys_package display_value="DataSanity" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
         <sys_policy/>
-        <sys_scope display_value="DataSanity WORK IN PROGRESS">e0746823dbad0510bcced03cd396198d</sys_scope>
+        <sys_scope display_value="DataSanity">e0746823dbad0510bcced03cd396198d</sys_scope>
         <sys_update_name>sys_atf_step_3a2539661bf38210063ddc61ab4bcb91</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2024-08-06 17:21:50</sys_updated_on>
