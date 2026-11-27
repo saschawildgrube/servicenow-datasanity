@@ -17,12 +17,14 @@
         <menu/>
         <name>DataSanity</name>
         <package_json/>
+        <package_resolver_version/>
         <private>false</private>
         <restrict_table_access>false</restrict_table_access>
         <runtime_access_tracking>permissive</runtime_access_tracking>
         <scope>x_snc_datasanity</scope>
         <scoped_administration>false</scoped_administration>
         <short_description>DataSanity contains Instance Scan checks that verify data quality.</short_description>
+        <sn_managed>false</sn_managed>
         <source>x_snc_datasanity</source>
         <store_correlation_id/>
         <store_url/>
@@ -41,13 +43,14 @@
         <user_role/>
         <vendor/>
         <vendor_prefix/>
-        <version>1.6.0</version>
+        <version>1.7.0</version>
         <x_snc_devtools_documentation_url>https://www.wildgrube.com/servicenow-datasanity</x_snc_devtools_documentation_url>
         <x_snc_devtools_maintainer>Sascha Wildgrube</x_snc_devtools_maintainer>
         <x_snc_devtools_maintainer_email>sascha@wildgrube.com</x_snc_devtools_maintainer_email>
         <x_snc_devtools_repo_url>https://github.com/saschawildgrube/servicenow-datasanity.git</x_snc_devtools_repo_url>
         <x_snc_devtools_showstopper>false</x_snc_devtools_showstopper>
         <x_snc_devtools_showstopper_details/>
+        <x_snc_devtools_type/>
         <x_snc_wildgrubelab_test/>
         <x_snc_wildgrubelab_test2/>
     </sys_app>

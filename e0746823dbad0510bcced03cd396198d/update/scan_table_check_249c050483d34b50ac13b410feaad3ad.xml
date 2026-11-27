@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="scan_table_check">
     <scan_table_check action="INSERT_OR_UPDATE">
         <active>true</active>
-        <advanced>false</advanced>
+        <advanced>true</advanced>
         <category>data_sanity</category>
-        <conditions table="sys_user">identity_typeNOT INhuman,machine,ai_agent^EQ<item display_value="human,machine,ai_agent" endquery="false" field="identity_type" goto="false" newquery="false" operator="NOT IN" or="false" value="human,machine,ai_agent"/>
-            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
-        </conditions>
-        <description>Users must have an Identity Type. Any user without an Identity Type ("Human", "Machine" or "AI") indicates an inconsistent, outdated or defective user import or creation process that should be fixed.</description>
+        <conditions/>
+        <description>Users must have an Identity Type. Any user without an Identity Type ("Human", "Machine" or "AI") indicates an inconsistent, outdated or defective user import or creation process that should be fixed.&#13;
+Note that user that were created prior to the Australia releae typically do not have an identity type.&#13;
+The OOTB technical user "playbook.automation_runner" is considered as an exception because the user is protected against any change and shipped without an identity type.</description>
         <documentation_url>https://www.servicenow.com/docs/r/platform-administration/user-administration/t_CreateAUser.html</documentation_url>
         <finding_type>scan_finding</finding_type>
         <name>DataSanity - Users without Identity Type</name>
@@ -18,7 +18,28 @@
         <score_scale>1</score_scale>
         <script><![CDATA[(function (engine) {
 
-    // Add your code here
+	var strUserName = x_snc_devtools.GetStringValue(current.user_name);
+
+	if (strUserName == 'playbook.automation_runner')
+	{
+		return;
+	}
+
+	var strIdentityType = x_snc_devtools.GetStringValue(current.identity_type);
+	if (strIdentityType == 'human')
+	{
+		return;
+	}
+	if (strIdentityType == 'ai_agent')
+	{
+		return;
+	}
+	if (strIdentityType == 'machine')
+	{
+		return;
+	}
+
+	engine.finding.increment();
 
 })(engine);]]></script>
         <short_description>Users must have an Identity Type</short_description>
@@ -26,14 +47,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-09-08 08:15:36</sys_created_on>
         <sys_id>249c050483d34b50ac13b410feaad3ad</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>DataSanity - Users without Identity Type</sys_name>
         <sys_package display_value="DataSanity" source="x_snc_datasanity">e0746823dbad0510bcced03cd396198d</sys_package>
         <sys_policy/>
         <sys_scope display_value="DataSanity">e0746823dbad0510bcced03cd396198d</sys_scope>
         <sys_update_name>scan_table_check_249c050483d34b50ac13b410feaad3ad</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-09-08 08:15:36</sys_updated_on>
+        <sys_updated_on>2026-11-17 09:35:50</sys_updated_on>
         <table>sys_user</table>
         <use_manifest>false</use_manifest>
     </scan_table_check>
